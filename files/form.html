@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <header #home class="encabezado">
+      <a href="./../index.html" style="color: aliceblue">
+        <h1>printHERE</h1>
+      </a>
+      <nav class="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="informacion.html">Información</a>
+        <a href="form.html">Empieza a imprimir!</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+    <form method="get" class="form">
+      <h1 id="inicio" #inicio>Formulario de envío</h1>
+      <div>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" required />
+      </div>
+      <div>
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" name="apellidos" id="apellidos" required />
+      </div>
+      <div>
+        <label for="email" class="telefonoEmail">Correo electrónico: </label>
+        <label for="telefono" class="telefonoEmail"
+          >Teléfono de contacto:
+        </label>
+        <input
+          type="email"
+          class="telefonoEmail"
+          name="email"
+          id="email"
+          required
+        />
+        <input
+          type="tel"
+          class="telefonoEmail"
+          name="telefono"
+          pattern="[5-9]\d{9}"
+          id="telefono"
+        />
+      </div>
+      <div>
+        <label for="url">Enlace a los documentos a imprimir: </label>
+        <input type="url" name="url" id="url" />
+      </div>
+      <div>
+        <label for="fecha" class="fechaHora">Fecha de entrega deseada: </label>
+        <label for="hora" class="fechaHora">Hora de entrega deseada: </label>
+        <input type="date" class="fechaHora" name="fecha" id="fecha" />
+        <input type="time" class="fechaHora" name="hora" id="hora" />
+      </div>
+      <div>
+        <label for="numeroCopias">Número de copias: </label>
+        <input
+          type="number"
+          min="1"
+          max="20"
+          name="numeroCopias"
+          id="numeroCopias"
+          required
+        />
+      </div>
+      <div>
+        <fieldset class="fieldset">
+          <legend>Formato de las copias</legend>
+          <input type="radio" name="blancoYnegro" id="blancoYnegro" />
+          <label for="blancoYNegro">Blanco y negro</label>
+          <input type="radio" name="color" id="color" />
+          <label for="color">Color</label>
+        </fieldset>
+      </div>
+      <div>
+        <fieldset class="fieldset">
+          <legend>Extras</legend>
+          <input type="checkbox" name="encuadernado" id="encuadernado" />
+          <label for="encuadernado">Encuadernado</label>
+            <input type="checkbox" name="portada" id="portada" />
+          <label for="portada">Primera hora como portada</label>
+          <input type="checkbox" name="tapaDura" id="tapaDura" />
+          <label for="tapaDura">Tapa dura</label>
+        </fieldset>
+      </div>
+      <div>
+        <input type="submit" name="enviar" id="enviar" value="Enviar" />
+      </div>
+    </form>
+  </body>
+</html>
